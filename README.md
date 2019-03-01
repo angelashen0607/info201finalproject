@@ -15,9 +15,12 @@ There are a wide variety of audiences who might interact with this dataset, rang
   5. What are the standard deviations of values/wages?
 
 ## Technical Description
- - **Reading in data:** We will be reading the data in as a .csv file.
+ - **Reading in data:**
+    We will be reading the data in as a .csv file.
  - **Types of data wrangling:**
+    By using `dplyr`, we select/mutate/fiter the dataset.
  - **New libraries to be used:**
+    We will use `plotly`,`ggplot`.`shiny`,`tidyverse` and so on.
  - **Some challenges we anticipate are:**
     1) We all have a general understanding of the FIFA data set; however, we do not possess significant expertise on the domain. Analyzing and Interpreting findings may require additional research
     2) The ability to be flexible and consider the context in the short amount of time we have to work on this project. Communication and clear collaboration efforts will be key.
@@ -29,3 +32,4 @@ There are a wide variety of audiences who might interact with this dataset, rang
     4) Average height of players in each position.
     5) Which nation has the most players
     6) What players have been playing the longest
+    7) Average potential of players in each nation.
