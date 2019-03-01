@@ -19,9 +19,7 @@ There are a wide variety of audiences who might interact with this dataset, rang
 We will be reading the data in as a .csv file.
  
 - **Types of data wrangling:**
-We would probably need to subset the dataset and group the elements according to the choice of selections. In addition, we would also have to filter out the data according to the user's selections. 
-
-By using `dplyr`, we select/mutate/fiter the dataset.
+We would probably need to subset the dataset and group the elements according to the choice of selections. In addition, we would also have to filter out the data according to the user's selections. By using `dplyr`, we select/mutate/fiter the dataset.
  
 - **New libraries to be used:**
 We plan to use `plotly`,`ggplot`.`shiny`,`tidyverse` and so on.
