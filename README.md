@@ -2,6 +2,8 @@
 
 ## Project Description
 - **General data set information:**
+The dataset that we are using is “FIFA 19 complete player dataset” extracted from [Kaggle](https://www.kaggle.com/karangadiya/fifa19/version/4) The dataset includes detailed attributes for every player registered in the latest edition of FIFA 19 database and was posted by Karan Gadiysa, a student at University of Virginia. The data was gathered from https://sofifa.com/.
+
 - **Target Audience:**
 - **Three questions the data will answer:**
   1)
