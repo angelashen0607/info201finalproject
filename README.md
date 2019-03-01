@@ -2,17 +2,20 @@
 
 ## Project Description
 - **General data set information:**
-The dataset that we are using is “FIFA 19 complete player dataset” extracted from [Kaggle](https://www.kaggle.com/karangadiya/fifa19/version/4) The dataset includes detailed attributes for every player registered in the latest edition of FIFA 19 database and was posted by Karan Gadiysa, a student at University of Virginia. The data was gathered from https://sofifa.com/.
+The dataset that we are using is “FIFA 19 complete player dataset” extracted from [Kaggle](https://www.kaggle.com/karangadiya/fifa19/version/4). The dataset includes detailed attributes for every player registered in the latest edition of FIFA 19 database and was posted by Karan Gadiysa, a student at University of Virginia. The data was gathered from https://sofifa.com/.
 
 - **Target Audience:**
-- **Three questions the data will answer:**
-  1)
-  2)
-  3)
+There are a wide variety of audiences who might interact with this dataset, ranging from players, coaches, fans, sponsorships, to advertisement companies. However, our targeted audience for this project is going to be focused on the coaches. The coaches will be able to use this datset to pick out the most valued players with the most potential for their teams in forming stronger teams.
 
+- **Three or more questions the data will answer:**
+  1) Who is the most valuable goalkeeper?
+  2) What are the correlation between overall score and the value?
+  3) What is the average age of the soccer players?
+  4) What is the average height of the soccer players?
+  5) What are the standard deviations of values/wages?
 
 ## Technical Description
- - **Reading in data:** we will be reading the data in as a .csv file.
+ - **Reading in data:** We will be reading the data in as a .csv file.
  - **Types of data wrangling:**
  - **New libraries to be used:**
  - **Some challenges we anticipate are:**
