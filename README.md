@@ -1,5 +1,4 @@
-# INFO 201 Final project
-# Group BA5
+# INFO 201 Final project - Group BA5
 
 ## Project Description
 - **General data set information:**
