@@ -14,7 +14,7 @@
  - **Reading in data:** we will be reading the data in as a .csv file.
  - **Types of data wrangling:**
  - **New libraries to be used:**
- - **The challenges we anticipate are:**
+ - **Some challenges we anticipate are:**
     1) We all have a general understanding of the FIFA data set; however, we do not possess significant expertise on the domain. Analyzing and Interpreting findings may require additional research
     2) The ability to be flexible and consider the context in the short amount of time we have to work on this project. Communication and clear collaboration efforts will be key.
     3) Running into debugging errors that take more time to resolve than we had originally planned to allot. Especially if we envision aspects of a page that we have not yet learned about in class, incorporating ideas from the internet can be more challenging.
