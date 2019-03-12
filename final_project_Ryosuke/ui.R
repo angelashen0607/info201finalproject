@@ -6,9 +6,9 @@ fifa_data <- read.csv("data.csv")
 # select the data from midwest dataset
 df <- fifa_data %>%
   separate(Wage,c('Wage', 'mark'),sep = 'K') 
-df$Wage <- gsub("€", " ", df$Wage)
-df$Wage <- paste0(df$Wage,"000")
-df$Wage <- as.numeric(df$Wage)
+fifa_data$Wage <- gsub("€", " ", fifa_data$Wage)
+fifa_data$Wage <- paste0(fifa_data$Wage,"000")
+fifa_data$Wage <- as.numeric(fifa_data$Wage)
 
 group_age <- fifa_data %>%
   sample_n(1000) %>%
