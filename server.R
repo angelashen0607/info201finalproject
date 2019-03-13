@@ -71,13 +71,13 @@ server <- function(input, output) {
   output$scatter1 <- renderPlot({
     g <- ggplot(data = filtered(), aes_string(x = "Age", y = input$ability)) + 
       geom_point() +
-      geom_smooth(method = "lm") 
+      geom_smooth(method = "lm",se = F) 
     g
   })
   output$scatter2 <- renderPlot({
     g <- ggplot(data = filtered1(), aes_string(x = "Wage", y = input$ability)) + 
       geom_point() +
-      geom_smooth(method = "lm") 
+      geom_smooth(method = "lm",se=F) 
     g
   })
   
