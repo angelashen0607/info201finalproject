@@ -45,6 +45,109 @@ select_values1 <- colnames(group_age[2:9])
 shinyUI(fluidPage(
   includeCSS("styles.css"),
   navbarPage("FIFA Data Exploration", 
+             tabPanel("Overview",
+                mainPanel(
+                  tags$h1("Overview of FIFA Player Exploration"),
+                  tags$h3("What Is The Correlation Between Players' Ages 
+                          and Wages?"),
+                  tags$em("Because it will be hard for the users to read data 
+                          from all 18,206 players displayed on the graph, we 
+                          took a sample of the first 1000 players and made 
+                          correlation plots accordingly."),
+                  tags$br(),
+                  tags$br(),
+                  tags$body("We seek to develop a relationship between the age 
+                          and selected ability & the wages and selected ability.
+                          The dots on both graphs represent the average value of
+                          each specific group. For instance, the dot on the age 
+                          of 20 represents the average overall score 
+                          (if overall score is the selected value) of players 
+                          who are 20 years old. The lines on both graphs reveal 
+                          the positive or negative correlation 
+                          (ordinary least square) between age/wage and the 
+                          selected values."),
+                  tags$h4("Data Used:"),
+                  tags$ul(
+                    tags$li("Age of the players"), 
+                    tags$li("Wage of the players"), 
+                    tags$li("Ability of the players"),
+                    tags$li("Overall Score"),
+                    tags$li("Agility"),
+                    tags$li("Sprint Speed"),
+                    tags$li("Shot Power"),
+                    tags$li("Stamina"),
+                    tags$li("Aggression"),
+                    tags$li("Positioning"),
+                    tags$li("Finishing")
+                  ),
+                  tags$h3("Where Are Most Players From and How Are 
+                          Their Skills?"),
+                  tags$body("We plan to provide demographic information for the
+                            coaches so it is easier for them to understand a 
+                            player's background. Every dot on the map includes a
+                            player's photo, name, nationality, wage, value, 
+                            club, and one selected value. With this information,
+                            the coach can easily search for players with from a
+                            specific region and check for a specific selected 
+                            ability."),
+                  tags$h4("Data Used:"),
+                  tags$ul(
+                    tags$li("Location of the players"), 
+                    tags$li("Name of the players"), 
+                    tags$li("Nationality of the players"),
+                    tags$li("Wage of the players"),
+                    tags$li("Value of the players"),
+                    tags$li("Clubs that players belong to"),
+                    tags$li("Ability of the players"),
+                    tags$li("Crossing"),
+                    tags$li("Finishing"),
+                    tags$li("Head Accuracy"),
+                    tags$li("Short Passing"),
+                    tags$li("Dribbling"),
+                    tags$li("Volleys"),
+                    tags$li("Curve"),
+                    tags$li("Long Passing"),
+                    tags$li("Ball Control"),
+                    tags$li("Acceleration"),
+                    tags$li("Sprint Speed"),
+                    tags$li("Agility"),
+                    tags$li("Reactions"),
+                    tags$li("Balance"),
+                    tags$li("Shot Power"),
+                    tags$li("Stamina"),
+                    tags$li("Strength")
+                  ),
+                  tags$h3("What Are the Price-Performance Ratio For Each Player
+                          In Different Club?"),
+                  tags$em("Because there are players who have high overall score
+                          but low value, we measure the price-performance ratio
+                          by dividing the overall score by the players' values. 
+                          (which gives an information of the score per EUR of 
+                          players) We define the most valuable player as the 
+                          player with higher price-performance ratio."),
+                  tags$br(),
+                  tags$br(),
+                  tags$body("We plan to provide coach information about each 
+                            player's price-performance ratio in the selected 
+                            club. With the graph provided, the coach will be 
+                            able to find the most valuable player in the 
+                            selected club with selected skills."),
+                  tags$h4("Data Used:"),
+                  tags$ul(
+                    tags$li("Clubs that players belong to"), 
+                    tags$li("Overall score of the players"), 
+                    tags$li("Value of the players"),
+                    tags$li("Ability of the players"),
+                    tags$li("Agility"),
+                    tags$li("Sprint Speed"),
+                    tags$li("Shot Power"),
+                    tags$li("Stamina"),
+                    tags$li("Aggression"),
+                    tags$li("Positioning"),
+                    tags$li("Finishing")
+                  )
+                )
+             ),
              tabPanel("Demographics", 
                       sidebarLayout(
                         
