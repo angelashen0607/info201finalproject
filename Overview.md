@@ -1,14 +1,10 @@
-# INFO 201 Final project - Group BA5
-
-## Overview - Major Questions We Seek to Answer
-
-what major questions are you seeking to answer, and what data will you use to answer those questions?
+# Overview - Major Questions We Seek to Answer
 
 ### What Is The Correlation Between Players' Ages and Wages?
 
 *Because it will be hard for the users to read data from all 18,206 players displayed on the graph, we took a sample of the first 1000 players and made correlation plots accordingly.*
 
-We seek to develop a relationship between **the age and selected ability** & **the wages and selected ability.** The dots on both graphs represent the average value of each specific group. For instance, the dot on the age of 20 represents the average overall score (if overall is the selected value) of players who are 20 years old. The lines on both graphs reveal the positive or negative correlation (ordinary least square) between age/wage and the selected values.
+We seek to develop a relationship between **the age and selected ability** & **the wages and selected ability.** The dots on both graphs represent the average value of each specific group. For instance, the dot on the age of 20 represents the average overall score (if overall score is the selected value) of players who are 20 years old. The lines on both graphs reveal the positive or negative correlation (ordinary least square) between age/wage and the selected values.
 
 **Data Used:**
 * Age of the players
@@ -60,6 +56,15 @@ We plan to provide **demographic information** for the coaches so it is easier f
 
 We plan to provide coach information about each player's **price-performance ratio in the selected club.** With the graph provided, the coach will be able to find the most valuable player in the selected club with selected skills.
 
-
 **Data Used:**
-* 
+* Clubs that players belong to
+* Overall score of the players
+* Value of the players
+* Ability of the players
+  + Agility
+  + Sprint Speed
+  + Shot Power
+  + Stamina
+  + Aggression
+  + Positioning
+  + Finishing
