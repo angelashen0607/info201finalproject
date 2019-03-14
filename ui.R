@@ -43,9 +43,11 @@ wage_range <- range(group_wage[1])
 #extract the column by specifying an index
 select_values1 <- colnames(group_age[2:9])
 shinyUI(fluidPage(
+  includeCSS("styles.css"),
   navbarPage("FIFA Data Exploration", 
              tabPanel("Demographics", 
                       sidebarLayout(
+                        
                         sidebarPanel(
                           selectInput(
                             "color", 
