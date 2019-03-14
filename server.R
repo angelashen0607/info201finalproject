@@ -56,7 +56,8 @@ server <- function(input, output) {
         ),
         color = "black", 
         radius = 5,
-        stroke = FALSE
+        stroke = FALSE, 
+        opacity = fifa_data[, input$color] / 100
       )
   })
   filtered <- reactive({
@@ -82,5 +83,14 @@ server <- function(input, output) {
       geom_smooth(method = "lm",se=F) 
     g
   })
-  
+    
+    output$select_targets <- renderPlot({
+      unit_value <- group_by(fifa_data, Overall,Value)
+      unit_value <- fifa_data %>% filter(Club == input$Club)
+      
+      summary <- unit_value %>%
+        select(Value, Overall)
+      ggplot(summary, aes(x=Value, y=Overall)) +
+        geom_boxplot(size=1, fill="yellow")
+    })
 }

@@ -215,6 +215,22 @@ shinyUI(fluidPage(
                  plotOutput("scatter1"),
                  plotOutput("scatter2")
                )
+             ),
+             tabPanel(
+               "Club Value", 
+               sidebarLayout(
+                 sidebarPanel(
+                   selectInput("Club","Please Select A Club",
+                               label = h3 ("Select a Club"),
+                               choices = list("FC Barcelona", "Juventus","Paris Saint-Germain", 
+                                              "Manchester United", "Real Madrid", "Atlético Madrid", 
+                                              "Manchester City", "FC Bayern München"))
+                 ),
+                 # Show a plot of the generated distribution
+                 mainPanel(
+                   plotOutput("select_targets")
+                 )
+               )  
              )
   )
 ))
