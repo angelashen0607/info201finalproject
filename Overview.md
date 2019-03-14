@@ -59,3 +59,6 @@ We plan to provide **demographic information** for the coaches so it is easier f
 *Because there are players who have high overall score but low value, we measure the price-performance ratio by dividing the overall score by the players' values. (which gives an information of the score per EUR of players) We define the most valuable player as the player with higher price-performance ratio.*
 
 We plan to provide coach information about each player's **price-performance ratio in the selected club.** With the graph provided, the coach will be able to find the most valuable player in the selected club with selected skills.
+
+
+**Data Used:**
