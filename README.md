@@ -1,7 +1,5 @@
 Website Link: http://127.0.0.1:3608
 
-(Link to Website)[http://127.0.0.1:3608]
-
 
 
 # INFO 201 Final project - Group BA5
