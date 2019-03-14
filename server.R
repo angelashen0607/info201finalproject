@@ -4,13 +4,17 @@ library(leaflet)
 library(ggplot2)
 library(tidyr)
 
+#read the data from our directory
 fifa_data <- read.csv("data.csv")
+
+#make the column of wage as numeric
 df <- fifa_data %>%
   separate(Wage,c('Wage', 'mark'),sep = 'K') 
 df$Wage <- gsub("€", " ", df$Wage)
 df$Wage <- paste0(df$Wage,"000")
 df$Wage <- as.numeric(df$Wage)
 
+#extract the 1000 samples and calicurate the mean of each component based on age
 group_age <- df %>%
   sample_n(1000) %>%
   group_by(Age) %>%
@@ -24,6 +28,7 @@ group_age <- df %>%
             Positioning = mean(Positioning),
             Finishing = mean(Finishing),na.rm = T)
 
+#extract the 1900 samples and calicurate the mean of each components based on the wage
 group_wage <- df %>%
   sample_n(1900) %>%
   group_by(Wage) %>%
@@ -39,6 +44,7 @@ group_wage <- df %>%
 
 server <- function(input, output) {
   
+  #Makes world map for displaying where players are from
   output$world_map <- renderLeaflet({
     leaflet(data = fifa_data) %>% 
       addProviderTiles(providers$CartoDB.Positron) %>% 
@@ -60,6 +66,8 @@ server <- function(input, output) {
         opacity = fifa_data[, input$color] / 100
       )
   })
+  
+  # Filters data and makes graphical representations for corrleational data
   filtered <- reactive({
     data <- group_age %>%
       filter(Age > input$age[1], Age < input$age[2]) 
@@ -77,6 +85,7 @@ server <- function(input, output) {
       geom_smooth(method = "lm",se = F) 
     g
   })
+  
   output$scatter2 <- renderPlot({
     g <- ggplot(data = filtered1(), aes_string(x = "Wage", y = input$ability)) + 
       geom_point() +
@@ -84,13 +93,15 @@ server <- function(input, output) {
     g
   })
     
-    output$select_targets <- renderPlot({
-      unit_value <- group_by(fifa_data, Overall,Value)
-      unit_value <- fifa_data %>% filter(Club == input$Club)
+  #Created graphical representation for club specific data
+  output$select_targets <- renderPlot({
+    unit_value <- group_by(fifa_data, Overall,Value)
+    unit_value <- fifa_data %>% filter(Club == input$Club)
       
-      summary <- unit_value %>%
-        select(Value, Overall)
-      ggplot(summary, aes(x=Value, y=Overall)) +
-        geom_boxplot(size=1, fill="yellow")
-    })
+   summary <- unit_value %>%
+      select(Value, Overall)
+    ggplot(summary, aes(x=Value, y=Overall)) +
+      geom_boxplot(size=1, fill="yellow")
+    
+  })
 }

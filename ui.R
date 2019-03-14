@@ -4,13 +4,15 @@ library(ggplot2)
 library(dplyr) 
 library(tidyr)
 fifa_data <- read.csv("data.csv")
-# select the data from midwest dataset
+
+#make the column of wage as numeric
 df <- fifa_data %>%
   separate(Wage,c('Wage', 'mark'),sep = 'K') 
 df$Wage <- gsub("€", " ", df$Wage)
 df$Wage <- paste0(df$Wage,"000")
 df$Wage <- as.numeric(df$Wage)
 
+#extract the 1000 samples and calicurate the mean of each component based on age
 group_age <- df %>%
   sample_n(1000) %>%
   group_by(Age) %>%
@@ -24,6 +26,7 @@ group_age <- df %>%
             Positioning = mean(Positioning),
             Finishing = mean(Finishing),na.rm = T)
 
+#extract the 1900 samples and calicurate the mean of each components based on the wage
 group_wage <- df %>%
   sample_n(1900) %>%
   group_by(Wage) %>%
@@ -37,14 +40,19 @@ group_wage <- df %>%
             Positioning = mean(Positioning),
             Finishing = mean(Finishing),na.rm = T)
 
-
+#specify the range of max age and min age
 age_range <- range(group_age[1])
+
+#specify the range if max wage and min wage
 wage_range <- range(group_wage[1])
+
 #extract the column by specifying an index
 select_values1 <- colnames(group_age[2:9])
+
 shinyUI(fluidPage(
   includeCSS("styles.css"),
   navbarPage("FIFA Data Exploration", 
+             #Overview page of the data exploration
              tabPanel("Overview",
                 mainPanel(
                   tags$h1("Overview of FIFA Player Exploration"),
@@ -148,6 +156,7 @@ shinyUI(fluidPage(
                   )
                 )
              ),
+             #Demographical data, displayes a map of where players are from with popup informaiton
              tabPanel("Demographics", 
                       sidebarLayout(
                         
@@ -182,6 +191,7 @@ shinyUI(fluidPage(
                         )
                       )
              ),
+             # Displayes 2 correlational graphs per selected data
              tabPanel(
                "Correlation plot",
                
@@ -216,8 +226,10 @@ shinyUI(fluidPage(
                  plotOutput("scatter2")
                )
              ),
+             # Displays graphical data for club specifics 
              tabPanel(
                "Club Value", 
+               titlePanel("Player Value based on Performance Ratio"),
                sidebarLayout(
                  sidebarPanel(
                    selectInput("Club","Please Select A Club",
