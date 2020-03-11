@@ -74,6 +74,8 @@
               ],
               "z": 2,
               "hasOpenThreats": false,
+              "isEncrypted": false,
+              "isPublicNetwork": true,
               "attrs": {
                 ".marker-target": {
                   "class": "marker-target hasNoOpenThreats isInScope"
@@ -135,7 +137,7 @@
               },
               "position": {
                 "x": 430,
-                "y": 190
+                "y": 200
               },
               "angle": 0,
               "id": "4d723377-b2f3-40ff-9740-600a9aee1c1c",
@@ -316,25 +318,34 @@
                 "height": 80
               },
               "position": {
-                "x": 690,
+                "x": 680,
                 "y": 530
               },
               "angle": 0,
               "id": "d2ece60a-d4cc-4dc7-8313-7028a9a01d4a",
               "z": 10,
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isEncrypted": true,
               "storesCredentials": true,
               "isSigned": true,
+              "threats": [
+                {
+                  "status": "Open",
+                  "severity": "High",
+                  "title": "Providing info to someone who's not authorized",
+                  "type": "Information disclosure",
+                  "description": "allowing users to access stored credentials"
+                }
+              ],
               "attrs": {
                 ".element-shape": {
-                  "class": "element-shape hasNoOpenThreats isInScope"
+                  "class": "element-shape hasOpenThreats isInScope"
                 },
                 "text": {
                   "text": "User Data\n(authentication\ncredential store)"
                 },
                 ".element-text": {
-                  "class": "element-text hasNoOpenThreats isInScope"
+                  "class": "element-text hasOpenThreats isInScope"
                 }
               }
             },
@@ -345,7 +356,7 @@
                 "height": 100
               },
               "position": {
-                "x": 840,
+                "x": 870,
                 "y": 190
               },
               "angle": 0,
@@ -415,6 +426,7 @@
               ],
               "z": 13,
               "hasOpenThreats": false,
+              "isEncrypted": true,
               "attrs": {
                 ".marker-target": {
                   "class": "marker-target hasNoOpenThreats isInScope"
@@ -454,6 +466,7 @@
               ],
               "z": 14,
               "hasOpenThreats": false,
+              "isEncrypted": true,
               "attrs": {
                 ".marker-target": {
                   "class": "marker-target hasNoOpenThreats isInScope"
@@ -493,7 +506,7 @@
               ],
               "z": 15,
               "hasOpenThreats": false,
-              "isEncrypted": false,
+              "isEncrypted": true,
               "attrs": {
                 ".marker-target": {
                   "class": "marker-target hasNoOpenThreats isInScope"
