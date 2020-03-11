@@ -323,6 +323,9 @@
               "id": "d2ece60a-d4cc-4dc7-8313-7028a9a01d4a",
               "z": 10,
               "hasOpenThreats": false,
+              "isEncrypted": true,
+              "storesCredentials": true,
+              "isSigned": true,
               "attrs": {
                 ".element-shape": {
                   "class": "element-shape hasNoOpenThreats isInScope"
@@ -354,7 +357,7 @@
                   "class": "element-shape hasNoOpenThreats isInScope"
                 },
                 "text": {
-                  "text": "O'reilly\nlogged-in web\nserver"
+                  "text": "Authenticated\nO'reilly server"
                 },
                 ".element-text": {
                   "class": "element-text hasNoOpenThreats isInScope"
@@ -369,13 +372,13 @@
                 "y": 70
               },
               "target": {
-                "x": 850,
+                "x": 870,
                 "y": 440
               },
               "vertices": [
                 {
-                  "x": 780,
-                  "y": 260
+                  "x": 800,
+                  "y": 270
                 }
               ],
               "id": "e830df5e-967b-4591-9aad-bc0fa044be71",
@@ -451,6 +454,46 @@
               ],
               "z": 14,
               "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "x": 750,
+                "y": 240
+              },
+              "target": {
+                "x": 890,
+                "y": 310
+              },
+              "vertices": [],
+              "id": "68ce1622-19fe-4229-80a9-e968d456cb57",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.7910107851902202,
+                    "offset": 17.919633844275385
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Authenticated data",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 15,
+              "hasOpenThreats": false,
+              "isEncrypted": false,
               "attrs": {
                 ".marker-target": {
                   "class": "marker-target hasNoOpenThreats isInScope"
