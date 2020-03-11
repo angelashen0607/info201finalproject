@@ -316,7 +316,7 @@
                 "height": 80
               },
               "position": {
-                "x": 680,
+                "x": 690,
                 "y": 530
               },
               "angle": 0,
@@ -381,6 +381,84 @@
               "id": "e830df5e-967b-4591-9aad-bc0fa044be71",
               "z": 12,
               "attrs": {}
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "x": 720,
+                "y": 310
+              },
+              "target": {
+                "x": 740,
+                "y": 500
+              },
+              "vertices": [],
+              "id": "fdc17a08-d57e-480e-a94f-695e9074b79a",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.7829383963708303,
+                    "offset": 18.49401519580002
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Authentication Data",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 13,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "x": 830,
+                "y": 500
+              },
+              "target": {
+                "x": 740,
+                "y": 300
+              },
+              "vertices": [],
+              "id": "36dbe1df-57c2-47b5-b343-47ad79f70d6d",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.4519700971679364,
+                    "offset": -2.9322750575734515
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "Query result",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 14,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
             }
           ]
         },
