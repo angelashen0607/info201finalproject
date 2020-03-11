@@ -10,7 +10,155 @@
       {
         "title": "diagram",
         "thumbnail": "./public/content/images/thumbnail.jpg",
-        "id": 0
+        "id": 0,
+        "diagramJson": {
+          "cells": [
+            {
+              "type": "tm.Actor",
+              "size": {
+                "width": 160,
+                "height": 80
+              },
+              "position": {
+                "x": 130,
+                "y": 210
+              },
+              "angle": 0,
+              "id": "77386123-f287-4313-af90-5d68a9184180",
+              "z": 1,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "User"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "x": 210,
+                "y": 310
+              },
+              "target": {
+                "x": 420,
+                "y": 310
+              },
+              "vertices": [
+                {
+                  "x": 310,
+                  "y": 360
+                }
+              ],
+              "id": "4e742d78-0e06-4806-bbfc-cd14da7065f8",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.5190100288976641,
+                    "offset": 25.174494678386747
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "HTTP Request",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 2,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Flow",
+              "smooth": true,
+              "source": {
+                "x": 410,
+                "y": 170
+              },
+              "target": {
+                "x": 200,
+                "y": 180
+              },
+              "vertices": [
+                {
+                  "x": 300,
+                  "y": 130
+                }
+              ],
+              "id": "152d27e9-b49f-47d7-9944-997b358bfd1f",
+              "labels": [
+                {
+                  "position": {
+                    "distance": 0.5391855118668517,
+                    "offset": 20.843095717362367
+                  },
+                  "attrs": {
+                    "text": {
+                      "text": "HTTP Response",
+                      "font-weight": "400",
+                      "font-size": "small"
+                    }
+                  }
+                }
+              ],
+              "z": 3,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".marker-target": {
+                  "class": "marker-target hasNoOpenThreats isInScope"
+                },
+                ".connection": {
+                  "class": "connection hasNoOpenThreats isInScope"
+                }
+              }
+            },
+            {
+              "type": "tm.Process",
+              "size": {
+                "width": 100,
+                "height": 100
+              },
+              "position": {
+                "x": 430,
+                "y": 190
+              },
+              "angle": 0,
+              "id": "4d723377-b2f3-40ff-9740-600a9aee1c1c",
+              "z": 4,
+              "hasOpenThreats": false,
+              "attrs": {
+                ".element-shape": {
+                  "class": "element-shape hasNoOpenThreats isInScope"
+                },
+                "text": {
+                  "text": "O'reilly web\nserver"
+                },
+                ".element-text": {
+                  "class": "element-text hasNoOpenThreats isInScope"
+                }
+              }
+            }
+          ]
+        },
+        "size": {
+          "height": 590,
+          "width": 790
+        }
       }
     ]
   }
