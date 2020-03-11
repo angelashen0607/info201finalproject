@@ -1,0 +1,11 @@
+{
+  "summary": {
+    "title": "Lab: Threat Model",
+    "owner": "Angela",
+    "description": "This is a threat model for a webpage that uses UW's SSO for log-in."
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": []
+  }
+}
